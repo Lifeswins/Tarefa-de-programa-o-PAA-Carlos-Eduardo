@@ -1,10 +1,10 @@
 /*
- * 	TAREFA DE PROGRAMA«√O
+ * 	TAREFA DE PROGRAMA√á√ÉO
  *
  * 	AUTOR: Carlos Eduardo de Sousa
  *  Disciplina: PAA
  *
- *	Utilizando o algoritmo de ornenaÁ„o quicksort para ordenar o vetor:
+ *	Utilizando o algoritmo de ornena√ß√£o quicksort para ordenar o vetor:
  *
  *	A = [9 , 10 , -1, 3, 6, 2, 1, -3, 1, 0, -2, 15, 8, -7, 0]
  *
@@ -18,11 +18,11 @@ int partition(int A[], int p, int r){
 	int x = A[r];
 	int i = p-1;
 	for(int j=p; j<=r-1; j++){
-		if(A[j]<=x){
-			i = i+1;
-			swap(A[i], A[j]);
+	   if(A[j]<=x){
+	     i = i+1;
+	     swap(A[i], A[j]);
 
-		}
+	   }
 	}
 	swap(A[i+1], A[r]);
 	return i+1;
@@ -31,9 +31,9 @@ int partition(int A[], int p, int r){
 void quicksort(int A[], int p, int r){
 	int q=0;
 	if(p<r){
-		q = partition(A, p, r);
-		quicksort(A, p, q-1);
-		quicksort(A, q+1, r);
+	  q = partition(A, p, r);
+	  quicksort(A, p, q-1);
+	  quicksort(A, q+1, r);
 	}
 }
 
@@ -44,32 +44,32 @@ int main(){
 	int r=14;
 
 	cout << "=================== Vetor desordenado ================" << endl;
-    cout<<" "<<endl;
-    cout << "A =[";
-    for(int i=0;i<15;i++){
-        if (i == 14){
-           cout <<  A[i];
-        }
-        else{
-           cout <<  A[i] <<", ";
-        }
+    	cout<<" "<<endl;
+    	cout << "A =[";
+    	for(int i=0;i<15;i++){
+           if (i == 14){
+              cout <<  A[i];
+           }
+           else{
+              cout <<  A[i] <<", ";
+           }
 	}
 	cout <<"]"<<endl;
 
 	quicksort(A, p, r);
 
-    cout<<" "<<endl;
+        cout<<" "<<endl;
 	cout << "=================== Vetor ordenado ===================" << endl;
-    cout<<" "<<endl;
+        cout<<" "<<endl;
 
-    cout << "A =[";
+        cout << "A =[";
 	for(int i=0;i<15;i++){
-        if (i == 14){
-           cout <<  A[i];
-        }
-        else{
-           cout <<  A[i] <<", ";
-        }
+           if (i == 14){
+              cout <<  A[i];
+           }
+           else{
+              cout <<  A[i] <<", ";
+           }
 	}
 	cout <<"]"<<endl;
 
